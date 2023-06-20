@@ -4,7 +4,6 @@ import  Component1  from '../component1'
 
 const UserName = createContext()
 
-
 export default function UseContextHooks() {
 
   const[user, setUser] = useState('Dipak singh chouhan')
