@@ -1,10 +1,10 @@
-import UseContextHooks from './component';
+import UseHooks from './component';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <UseContextHooks />
+      <UseHooks />
       
     </div>
   );

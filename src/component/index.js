@@ -1,19 +1,20 @@
 // useContext
-import React, { useState,createContext } from 'react'
-import  Component1  from '../component1'
-
-const UserName = createContext()
+import React from 'react'
+import { useRef } from "react";
 
 export default function UseContextHooks() {
 
-  const[user, setUser] = useState('Dipak singh chouhan')
+
+  const inputElement = useRef();
+
+  const focusInput = () => {
+    inputElement.current.focus();
+  };
+
   return (
     <div>
-      <UserName.Provider value={user}>
-      <h1>{`Hello ${user} !`}</h1>
-      <Component1/>
-      </UserName.Provider>
+      <input type="text" ref={inputElement} />
+      <button onClick={focusInput}>Focus Input</button>
     </div>
   )
 }
-export {UserName};
